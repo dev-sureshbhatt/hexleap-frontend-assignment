@@ -2,6 +2,7 @@ interface CardProps {
   //I could create three type of cards as per the assignment FIGMA files
   variant: "event" | "collection" | "advertisement";
   data: CardData;
+  themeMode: "light" | "dark"
 }
 
 interface CardData {
@@ -24,7 +25,25 @@ export default function Card({ ...props }: CardProps) {
   const cardClass = `card${variant}`;
   return(
     <div className={cardClass}>
-      {variant === "event" && <>Hi, I am an Event Div</>}
+      {/* card variant type one styling/structure goes here */}
+      {variant === "event" && 
+      
+      (
+      <>
+      <div className={`image-div-${variant}`}>
+        Image Div
+      </div>
+      <div className={`title-div-${variant}`}>
+      Sacramento River Cats
+      </div>
+      <div className="flex">
+        <div className="flex flex-col"><span>Total Events</span><span>48</span></div>
+        <div className="flex flex-col"><span>Sport</span><span>Baseball</span></div>
+      </div>
+      </>
+      )
+      
+      }
       {variant === "advertisement" && <>Hi, I am an Advertisement Div</>}
       {variant === "collection" && <>Hi, I am a Collection Div</>}
     </div>
