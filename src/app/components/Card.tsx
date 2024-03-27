@@ -30,15 +30,17 @@ export default function Card({ ...props }: CardProps) {
       
       (
       <>
-      <div className={`image-div-${variant}`}>
-        Image Div
+      <div className="bg-[#3B3E47] p-2 w-[237px] h-[511px]">
+      <div className={`image-div-${variant} w-[217px] h-[385px]`}>
+        <img className="object-fill w-[217px] h-[385px]" src="https://s3-alpha-sig.figma.com/img/a24a/d1e0/76e2b366b2456bbd169b0c3c9525252c?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fnhdy7dQOQtLfNEts8Y48S1XXIo78WTAF8NMCby7P4sjC6OTdliMhF0d0tAj~lmWSrjvqUtg7~AfR9Cu7UzkprB34TEfUwdP17WZw6ak-PHZ5KUq43yWAfJQbKTahlsvrfN9t8YcNsp538gquzN~Q4gOC5DyWALE0EhpvBxb4NimSNiTG4WjdxfSwz5eOHvqWLk57~o3erxXoDjv0quRDx7PvAKyLnzLkW7L-2ivUCwu1QnVd4ZEDQez5aU8Gf0CRrwva7Tsoj5ZuQdw1yBolX9aJ1deMVeCinrZUWkKaLkTntZYMMP5GuIM9pr2sCp3MZiCGDZnwtQBcQwh0gS0TQ__" />
       </div>
-      <div className={`title-div-${variant}`}>
+      <div className={`title-div-${variant} mt-3 mb-3`}>
       Sacramento River Cats
       </div>
-      <div className="flex">
-        <div className="flex flex-col"><span>Total Events</span><span>48</span></div>
-        <div className="flex flex-col"><span>Sport</span><span>Baseball</span></div>
+      <div className="flex justify-between p-3 bg-[#292B32]">
+        <div className="flex flex-col"><span className="text-[12px]">Total Events</span><span className="text-[14px]">48 Events</span></div>
+        <div className="flex flex-col"><span className="text-[12px]">Sport</span><span className="text-[14px]">Baseball</span></div>
+      </div>
       </div>
       </>
       )

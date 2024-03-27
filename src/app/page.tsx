@@ -16,7 +16,7 @@ export default function Home() {
     {/* <Button id='btn-1' className=''>See More</Button>
     <Button id='btn-2' className=''>See More Button 2</Button> */}
 
-    <div className='flex gap-10'>
+    <div className='flex flex-wrap gap-4'>
     <Card themeMode={themeMode} variant='event' data={eventsData} />
     <Card themeMode={themeMode} variant='event' data={eventsData} />
     <Card themeMode={themeMode} variant='event' data={eventsData} />
