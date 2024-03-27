@@ -19,5 +19,9 @@ interface CardData {
 
 export default function Card({...props}: CardProps) {
     const {variant, data} = props
-  return <div>{variant}</div>;
+
+    // defining CSS classes based on Card variant
+    const cardClass = `card${variant}`
+    
+    return <div className={cardClass}>{variant}</div>;
 }
