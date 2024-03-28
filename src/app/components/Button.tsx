@@ -6,6 +6,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 
 export default function Button({children, ...props}: ButtonProps){
     return (
-        <button {...props}>{children}</button>
+        <button className="bg-[#2C9CF0] px-[30px] py-[10px] mt-7 mb-5" {...props}>{children}</button>
     )
 }
