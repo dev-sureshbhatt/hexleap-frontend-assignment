@@ -23,7 +23,7 @@ interface CardData {
 
 export default function Card({ ...props }: CardProps) {
   const { variant, data } = props;
-  const isThemeLight = true 
+  const isThemeLight = false 
 
   // defining CSS classes based on Card variant
   const cardClass = `card${variant}`;
