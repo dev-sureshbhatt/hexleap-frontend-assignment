@@ -10,9 +10,12 @@ interface CardData {
   team_name?: string;
   total_events?: number | string;
   sport?: string;
-  date_time?: string;
+  collection_team_image?: string;
+  date?: string;
+  day?:string;
+  time?:string;
   venue?: string;
-  CTA_text?: string;
+  tag_text?: string;
   ad_image?: string;
   ad_title?: string;
   ad_description?: string;
@@ -20,7 +23,7 @@ interface CardData {
 
 export default function Card({ ...props }: CardProps) {
   const { variant, data } = props;
-  const isThemeLight = false 
+  const isThemeLight = true 
 
   // defining CSS classes based on Card variant
   const cardClass = `card${variant}`;
@@ -71,15 +74,12 @@ export default function Card({ ...props }: CardProps) {
         {/* above class is affected with dark/light mode toggle  */}
           <img
             className="object-fill w-[217px] h-[218px]"
-            src="https://s3-alpha-sig.figma.com/img/c724/731e/f71497e0e3af85c77fa47046bb1f23cb?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YfHZuev7WUagkCJeDUVdHbkG5bqC2YmjXKJSZLKbyymg8PLUCF1d-3ITeG2OSpcKgHjVq3lbGf7eLgT0-RWii9vAbSSrltvD7RI88jX3A1p0QZTvL~643uJOzylJw00w1DWQKzrTEHLkK2D4jxJ4n3C9D03B-Odrn9zVjUWBi9mqnU5op991kONICO-AT7eCWb2APcuZxUGYnj8xpoj5L5modFS2ABEy2X1gaT0HXJZoVu2276JkODvrtjnC3F4~lM3f7rLQQam1iI8a3frGTCuFQfbXM3VAQ7nfBJDVDCcyeJcyc4m1oPldx2ONzo2CGn5jRfonRO5RlD-OHbierA__"
+            src={data.ad_image}
           />
           <div className="p-3 flex flex-col gap-2">
-            <p className="text-[20px]">Advertisement Title</p>
+            <p className="text-[20px]">{data.ad_title}</p>
             <p className="text-[12px] leading-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              {data.ad_description}
             </p>
           </div>
         </div>
@@ -94,22 +94,22 @@ export default function Card({ ...props }: CardProps) {
           {/* anove class is affected with dark/light mode toggle  */}
           <img
             className="object-fill w-[226px] h-[401px]"
-            src="https://s3-alpha-sig.figma.com/img/bc7b/d2d1/a2c7e5def5b347470305864869a894b6?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YxtMQ-umkbEHlxMyMnstAs6rYbIBMoz6Y6e6X~XvOsr-rAQ2g4qOWln3w~caMGqtbtAtbCjyj-yjVTMTm1mZVFfJBk5KOXa491~GuF-sCId9i622FHtykZ-nY9kpx54GqgSCB2nGFH3HeaHmDDrU0aEinZpFFnqbmnXRqB9agt6U5PFCW70dobn1FS2-uCCVjf-JcgJzpDyt6xoO-4xWk6IWNKkJCo1K7Ad4KoEpKKDiFYyDhsXOKGZrevPj~1tdFMRrtdkTS8ckyL82IMwnzlMMtKVgab1EpeEiBiF-BW88PwJ0towH4BaKyuBx~E-cLgN0lW8hacJNXlAv-u1nFA__"
+            src={data.collection_team_image}
           />
 
           <div className="flex flex-col text-center gap-3 mt-4">
-            <div className="text-[17px]">Las Vegas Aviators</div>
+            <div className="text-[17px]">{data.team_name}</div>
             <div className="pipe text-[14px] font-normal uppercase">
-              <span>Oct 15</span>
-              <span>SUN</span>
-              <span>4:30 pm</span>
+              <span>{data.date}</span>
+              <span>{data.day}</span>
+              <span>{data.time}</span>
             </div>
             <div className="text-[14px] font-normal">
-              Las Vegas Ballpark, Las Vegas, Nevada
+              {data.venue}
             </div>
           </div>
           <div className="bg-black text-[13px] px-[30px] py-[10px] mt-3 mb-3 text-center text-white">
-            Take Flight Collection
+            {data.tag_text}
           </div>
         </div>
       )}
