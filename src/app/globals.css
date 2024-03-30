@@ -18,8 +18,14 @@ DIV first fold - NO Background color
     --textColor:black,
     --softBg: #f0f0f0,
     --softTextColor:#626262
+}
+
+/* The div wrapper from layout.jsx file will have this container wrapper */
+.container{
 
 }
+
+
 
 *{
   
