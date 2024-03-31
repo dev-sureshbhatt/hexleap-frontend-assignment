@@ -23,7 +23,7 @@ interface CardData {
 
 export default function Card({ ...props }: CardProps) {
   const { variant, data } = props;
-  const isThemeLight = false 
+  const isThemeLight = true 
 
   // defining CSS classes based on Card variant
   const cardClass = `card${variant}`;
@@ -73,7 +73,7 @@ export default function Card({ ...props }: CardProps) {
         <div className={`p-2 w-[237px] h-[511px] flex flex-col gap-3 ${isThemeLight ? ("bg-[#FFFFFF] text-black"):  ("bg-[#3B3E47]")}`}>
         {/* above class is affected with dark/light mode toggle  */}
           <div className="relative">
-          <span className="absolute right-0 bg-black px-2 mr-1">Ad</span>
+          <span className="absolute right-0 bg-black text-white px-2 mr-1">Ad</span>
           <img
             className="object-fill w-[217px] h-[218px]"
             src={data.ad_image}
@@ -94,7 +94,7 @@ export default function Card({ ...props }: CardProps) {
   // <div className="bg-[#3B3E47] p-2 w-[257px] h-[624px]">
 
 
-        <div className={`p-3 w-[257px] h-[624px] ${isThemeLight ? ("bg-[#FFFFFF] text-black"):  ("bg-[#3B3E47]")}`}>
+        <div className={`p-3 w-[257px] h-[624px] shadow-2xl ${isThemeLight ? ("bg-[#FFFFFF] text-black"):  ("bg-[#3B3E47]")}`}>
           {/* anove class is affected with dark/light mode toggle  */}
           <img
             className="object-fill w-[226px] h-[401px]"

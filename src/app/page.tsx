@@ -12,7 +12,7 @@ const themeMode = "light"; // we can implement useState function to switch betwe
 
 export default function Home() {
 
-  const isThemeLight = false 
+  const isThemeLight = true 
 
 
 
@@ -39,7 +39,7 @@ export default function Home() {
 
 {/* collection spotlight DIV */}
 
-      <div className={`p-14 mt-10 ${isThemeLight ? ("bg-gradient-to-r from-[#F9F8FF] to-[#F3F9FF] text-black") : ("bg-gradient-to-r from-[#18282A] to-[#221A2C]")}`}>
+      <div className={`p-14 mt-10 shadow-lg ${isThemeLight ? ("bg-gradient-to-r from-[#F9F8FF] to-[#F3F9FF] text-black") : ("bg-gradient-to-r from-[#18282A] to-[#221A2C]")}`}>
       
       <div className="text-center">
       <h2 className="font-bold text-[30px] sm:text-[50px]">Collection Spotlight</h2>
