@@ -1,8 +1,9 @@
+import { useGlobalThemeContext } from "../context/ThemeContext";
+
 interface CardProps {
   //I could create three type of cards as per the assignment FIGMA files
   variant: "event" | "collection" | "advertisement";
   data: CardData;
-  themeMode: "light" | "dark";
 }
 
 interface CardData {
@@ -23,7 +24,8 @@ interface CardData {
 
 export default function Card({ ...props }: CardProps) {
   const { variant, data } = props;
-  const isThemeLight = true 
+  const {isThemeLight} = useGlobalThemeContext()
+
 
   // defining CSS classes based on Card variant
   const cardClass = `card${variant}`;
