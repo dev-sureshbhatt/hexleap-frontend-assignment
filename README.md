@@ -41,15 +41,20 @@ import Card from "./components/Card";
 
 ### Event Card
 
-![Event Card]
+![Event Card](<public/Card Component  - Event Variant.png>)
 
 ### Advertisement Card
 
-![Advertisement Card]
+![Advertisement Card](<public/Card Component  - Ad Variant.png>)
 
 ### Collection Card
 
-![Collection Card]
+![Collection Card](<public/Card Component  - Collection Variant.png>)
+
+### All Cards variants in action
+
+![alt text](<public/Card Component  - Variants in Action 2.png>)
+![alt text](<public/Card Component  - Variants in Action.png>)
 
 
 ### Theme Toggle
