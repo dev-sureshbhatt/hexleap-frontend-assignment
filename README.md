@@ -12,7 +12,7 @@ This project is a small assignment developed as part of the internship applicati
 
 #### Card Component
 
-The Card component is designed to be highly reusable and modular. It accepts props for variant (event, collection, advertisement) and data to render different types of cards.
+The Card component is designed to be highly reusable and modular. It accepts props for variant (event, collection, advertisement) and data to render different types of cards. You can view the usage of Card component in src/app/page.tsx file
 
 ##### Card Component Variants
 
