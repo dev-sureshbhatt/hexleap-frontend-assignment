@@ -25,9 +25,9 @@ export default function Home() {
 
   //function to toggle theme when theme toggle div is clicked
   function themeToggle() {
-    setIsThemeLight(!isThemeLight);
-  }
 
+    setIsThemeLight(!isThemeLight);
+}
 
   return (
     <main

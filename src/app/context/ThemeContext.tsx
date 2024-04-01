@@ -7,16 +7,20 @@ type Theme = {
 }
 
 interface ThemeContextInterface{
-isThemeLight: Theme
-setIsThemeLight: Dispatch<SetStateAction<Theme>>
+isThemeLight: boolean
+setIsThemeLight: Dispatch<SetStateAction<boolean>>
 }
 
-const defaultThemeState = {
-    isThemeLight: {isThemeLight: false},
-    setIsThemeLight: (isThemeLight: Theme) => {}
-} as ThemeContextInterface
+// const defaultThemeState = {
+//     isThemeLight: {isThemeLight: false},
+//     setIsThemeLight: (isThemeLight: Theme) => {}
+// } as ThemeContextInterface
 
 
+const defaultThemeState: ThemeContextInterface = {
+    isThemeLight: false,
+    setIsThemeLight: () => {}
+} 
 
 
 export const ThemeContext = createContext<ThemeContextInterface>(defaultThemeState)
@@ -27,7 +31,7 @@ type ThemeProviderProps = {
 }
 
 export default function ThemeProvider({children}: ThemeProviderProps){
-    const [isThemeLight, setIsThemeLight] = useState<Theme>({isThemeLight: false})
+    const [isThemeLight, setIsThemeLight] = useState<boolean>(false)
 
     return(
         <ThemeContext.Provider value={{isThemeLight, setIsThemeLight}}>
