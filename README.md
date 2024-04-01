@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Documentation
 
-## Getting Started
+### Overview
 
-First, run the development server:
+This project is a small assignment developed as part of the internship application for Hexleap. The goal was to create reusable and modular components using Next.js, Tailwind CSS, and TypeScript. The main focus was on building a reusable Card component that can render different types of cards based on the variant and data passed as props.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Card Component
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Card component is designed to be highly reusable and modular. It accepts props for variant (event, collection, advertisement) and data to render different types of cards.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+##### Variants
 
-## Learn More
+1. **Event Card**: Displays information about sports events.
+2. **Collection Card**: Highlights collection spotlight with team details and event information.
+3. **Advertisement Card**: Shows advertisement content with an image, title, and description.
 
-To learn more about Next.js, take a look at the following resources:
+### Theme Toggle
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Implemented a theme toggle functionality to switch between light mode and dark mode, providing a seamless user experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The project is deployed on Vercel for live preview and can be accessed using the following links:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **GitHub Repository**: [Link to GitHub](https://github.com/yourusername/your-repo)
+- **Live Demo**: [Link to Live Demo](https://your-vercel-app-url.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Responsiveness
+
+The webpage is responsive and optimized for mobile devices with a breakpoint of 320px, meeting the bonus requirement of the assignment.
