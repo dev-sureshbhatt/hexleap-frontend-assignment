@@ -35,6 +35,7 @@ import Card from "./components/Card";
 
 // Example usage for **Collection variant of the Card component**
 <Card variant="collection" data={collectionsData[0]} />
+```
 
 #### Example Screendhots of the Rendered cards in the application as per the variant selected 
 
