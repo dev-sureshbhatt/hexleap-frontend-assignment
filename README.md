@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Documentation
 
-## Getting Started
+### Technology Stack / Dependencies
 
-First, run the development server:
+React.js, Next.js, Tailwind CSS, Typescript, React Hooks (useContext for dark/light theme toggle)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Overview
+
+This project is a small assignment developed as part of the internship application for Hexleap. **The goal was to create reusable and modular components using Next.js, Tailwind CSS, and TypeScript.** The main focus was on building a **reusable Card component** that can render different types of cards based on the variant and data passed as props.
+
+### Components
+
+#### Card Component
+
+The Card component is designed to be highly reusable and modular. It accepts props for variant (event, collection, advertisement) and data to render different types of cards.
+
+##### Card Component Variants
+
+1. **Event Card**: Displays information about sports events.
+2. **Collection Card**: Highlights collection spotlight with team details and event information.
+3. **Advertisement Card**: Shows advertisement content with an image, title, and description.
+
+#### Card Component Example Usage
+
+Here is an example of how to use the Card component in your application:
+
+```jsx
+import Card from "./components/Card";
+
+// Example usage for **Event variant of the Card component**
+<Card variant="event" data={eventsData[0]} />
+
+// Example usage for **Advertisement variant of the Card component**
+<Card variant="advertisement" data={advertisementData[0]} />
+
+// Example usage for **Collection variant of the Card component**
+<Card variant="collection" data={collectionsData[0]} />
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Example Screendhots of the Rendered cards in the application as per the variant selected 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Event Card
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Event Card](<public/Hexleap Assignment - Event Component.png>)
 
-## Learn More
+### Advertisement Card
 
-To learn more about Next.js, take a look at the following resources:
+![Advertisement Card](<public/Hexleap Assignment - Advertisement Component.png>)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Collection Card
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Collection Card](<public/Hexleap Assignment - Collection variant card Component.png>)
 
-## Deploy on Vercel
+### All Cards in action
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![alt text](<public/Component variants in action 2.png>)
+![alt text](<public/Component variants in action.png>)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Theme Toggle
+
+Implemented a theme toggle functionality using useContext hook to switch between light mode and dark mode, providing a seamless user experience.
+
+## Deployment
+
+The project is deployed on Vercel for live preview and can be accessed using the following links:
+
+- **GitHub Repository**: [Link to GitHub](github.com/dev-sureshbhatt)
+- **Live Demo**: [Link to Live Demo](https://hexleap-frontend-assignment-delta.vercel.app/)
+
+## Responsiveness
+
+The webpage is responsive and optimized for mobile devices with a breakpoint of 320px, meeting the bonus requirement of the assignment.
